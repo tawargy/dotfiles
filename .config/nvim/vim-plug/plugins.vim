@@ -1,7 +1,6 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
    "theme
   Plug 'dracula/vim', { 'as': 'dracula' }
-  
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
@@ -15,6 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
+
+
 
 colorscheme dracula
 
