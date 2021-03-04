@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    "theme
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+  Plug 'morhetz/gruvbox'
 
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -18,7 +18,7 @@ call plug#end()
 
 
 colorscheme dracula
-
+"colorscheme gruvbox
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
