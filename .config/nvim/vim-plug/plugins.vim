@@ -2,8 +2,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    "theme
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'morhetz/gruvbox'
-
+  "Plug 'morhetz/gruvbox'
+  Plug 'mattn/emmet-vim' 
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   " Plug 'sheerun/vim-polyglot'
