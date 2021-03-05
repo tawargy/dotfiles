@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mattn/emmet-vim' 
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'ap/vim-css-color'
   " Plug 'sheerun/vim-polyglot'
 
     " File Explorer
@@ -33,3 +34,9 @@ let g:airline_right_sep = ''
 
 " Switch to your current theme
 let g:airline_theme = 'dracula'
+
+"EMMET
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+
