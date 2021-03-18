@@ -1,9 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
-let g:netrw_dirhist_7='/home/tawargy/.dotfiles/.config/nvim/vim-plug'
-let g:netrw_dirhist_6='/home/tawargy/.dotfiles/.config/nvim'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/tawargy/Desktop/vim'
+let g:netrw_dirhist_0='/home/tawargy/.dotfiles/fonts/NerdFonts'
+let g:netrw_dirhist_9='/home/tawargy/.dotfiles/fonts'
+let g:netrw_dirhist_8='/home/tawargy/Desktop/vim'
+let g:netrw_dirhist_7='/home/tawargy/Desktop/frontend'
+let g:netrw_dirhist_6='/home/tawargy/Desktop/vim'
 let g:netrw_dirhist_5='/media/tawargy/Data/1-WorkSpace/0-Sandbox/vim'
 let g:netrw_dirhist_4='/media/tawargy/Data/1-WorkSpace/0-Sandbox/cpp/test'
 let g:netrw_dirhist_3='/home/tawargy/Desktop/vim'
 let g:netrw_dirhist_2='/media/tawargy/Data/1-WorkSpace/0-Sandbox/vim'
-let g:netrw_dirhist_1='/home/tawargy/Desktop'
