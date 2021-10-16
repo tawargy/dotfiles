@@ -6,6 +6,7 @@ vim.cmd[[
 vnoremap <C-c> "+y
 map <C-p> "+p
 ]]
+--buffers navigation 
 map('n','<TAB>',':BufferLineCycleNext<CR>',opts_1)
 map('n','<S-TAB>',':BufferLineCyclePrev<CR>',opts_1)
 -- Use alt-hjkl to resize windows
@@ -31,12 +32,25 @@ map('n','<leader>f',':Format<CR>',opts_0)
 map('n','<C-f>',':Telescope find_files<CR>',opts_0)
 map('n','<leader>TT',':Telescope search_src<CR>',opts_0)
 
--- nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
--- nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
--- nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
--- nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+-- Find files using Telescope command-line sugar.
+map('n','<leader>ff',':Telescope find_files<CR>',opts_1)
+map('n','<leader>fg',':Telescope live_grep<CR>',opts_1)
+map('n','<leader>fb',':Telescope buffers<CR>',opts_1)
+map('n','<leader>fh',':Telescope help_tags<CR>',opts_1)
 
-
+--lsp saga
+map("n", "<Leader>cf", ":Lspsaga lsp_finder<CR>", {silent = true})
+map("n", "<leader>ca", ":Lspsaga code_action<CR>", {silent = true})
+map("v", "<leader>ca", ":<C-U>Lspsaga range_code_action<CR>", {silent = true})
+map("n", "<leader>ch", ":Lspsaga hover_doc<CR>", {silent = true})
+map("n", "<leader>ck", '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>', {silent = true})
+map("n", "<leader>cj", '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>', {silent = true})
+map("n", "<leader>cs", ":Lspsaga signature_help<CR>", {silent = true})
+map("n", "<leader>ci", ":Lspsaga show_line_diagnostics<CR>", {silent = true})
+map("n", "<leader>cn", ":Lspsaga diagnostic_jump_next<CR>", {silent = true})
+map("n", "<leader>cp", ":Lspsaga diagnostic_jump_prev<CR>", {silent = true})
+map("n", "<leader>cr", ":Lspsaga rename<CR>", {silent = true})
+map("n", "<leader>cd", ":Lspsaga preview_definition<CR>", {silent = true})
 
 
   

@@ -41,10 +41,10 @@ end
 
 vim.g.loaded_perl_provider = 0
 
--------------------------------------------------------------------------------
--- OPTIONS {{{1
--------------------------------------------------------------------------------
--- spaces per tab
+-----------------------------------------------------------------------------
+ --OPTIONS {{{1
+-----------------------------------------------------------------------------
+ --spaces per tab
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 -- spaces per tab (when shifting)
@@ -100,7 +100,6 @@ vim.opt.tildeop = true
 vim.opt.termguicolors= true
 vim.opt.background= 'dark'
 
-
 vim.opt.backupcopy = 'yes' -- overwrite files to update, instead of renaming + rewriting
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -114,13 +113,19 @@ vim.opt.directory:append '.'
 vim.opt.updatetime = 1000
 vim.opt.updatecount = 0 -- update swapfiles every 80 typed chars (I don't use swap files anymore)
 
--------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 -- PLUGINS {{{1
--------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 require'plugins'
-require'config.treesitter'
-require'config.nvim-lspconfig'
-require'config.telescope'
+
+require ('config.lsp')
+require ('config.treesitter')
+require ('config.autopairs')
+require ('config.lualine')
+require ('config.nvim-tree')
+require ('config.telescope')
+require ('config.todo-comments')
+require ('config.formatter')
 --------------------------------
 --keymap
 --------------------------------

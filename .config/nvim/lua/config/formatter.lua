@@ -1,5 +1,4 @@
-return function()
-    local function prettier()
+     local function prettier()
       return {
         exe = 'prettier',
         args = {
@@ -24,16 +23,7 @@ return function()
         stdin = true,
       }
     end
-  
-    local function shfmt()
-      return {
-        exe = 'shfmt',
-        args = { '-' },
-        stdin = true,
-      }
-    end
-  
-    local filetype = {
+       local filetype = {
       javascript = { prettier },
       typescript = { prettier },
       javascriptreact = { prettier },
@@ -50,78 +40,8 @@ return function()
       yaml = { prettier },
       graphql = { prettier },
       html = { prettier },
-      sh = { shfmt },
-      bash = { shfmt },
-      reason = {
-        function()
-          return {
-            exe = 'refmt',
-            stdin = true,
-          }
-        end,
-      },
-      rust = {
-        function()
-          return {
-            exe = 'rustfmt',
-            args = { '--emit=stdout' },
-            stdin = true,
-          }
-        end,
-      },
-      python = {
-        function()
-          return {
-            exe = 'black',
-            args = { '--quiet', '-' },
-            stdin = true,
-          }
-        end,
-      },
-      go = {
-        function()
-          return {
-            exe = 'gofmt',
-            stdin = true,
-          }
-        end,
-      },
-      nix = {
-        function()
-          return {
-            exe = 'nixpkgs-fmt',
-            stdin = true,
-          }
-        end,
-      },
-      lua = {
-        function()
-          return {
-            exe = 'stylua',
-            args = {
-              '--indent-type',
-              'Spaces',
-              '--line-endings',
-              'Unix',
-              '--quote-style',
-              'AutoPreferSingle',
-              '--indent-width',
-              vim.bo.tabstop,
-              '--column-width',
-              vim.bo.textwidth,
-              '-',
-            },
-            stdin = true,
-          }
-        end,
-      },
     }
-  
-    require('formatter').setup {
-      logging = false,
-      filetype = filetype,
-    }
-  end
 
-
-
+require('formatter').setup({
+  filetype = filetype 
+})
