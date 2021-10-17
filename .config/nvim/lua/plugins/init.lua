@@ -56,6 +56,7 @@ return require('packer').startup(function()
   use {'https://github.com/hrsh7th/nvim-cmp' }
   use {'https://github.com/hrsh7th/cmp-vsnip'}
   use {'https://github.com/hrsh7th/vim-vsnip'}
+  use {'https://github.com/hrsh7th/cmp-path'}
   use {'https://github.com/onsails/lspkind-nvim'}
   use {'https://github.com/glepnir/lspsaga.nvim'}
   use {'https://github.com/ray-x/lsp_signature.nvim',

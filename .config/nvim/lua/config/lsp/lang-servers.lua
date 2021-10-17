@@ -51,3 +51,4 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.pyright.setup{}
 -- require'lspconfig'.tsserver.setup{}
 
+

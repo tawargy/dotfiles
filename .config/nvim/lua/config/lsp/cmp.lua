@@ -52,12 +52,16 @@ end
      { name = 'nvim_lsp' },    
      { name = 'vsnip' },
      { name = 'buffer' },
-      path = {kind = "   (Path)"},
-      
+     {name = 'path'},
 
          },
  formatting = {
-    format = lspkind.cmp_format({with_text = true, maxwidth = 50})
-  }
-  })
+    format = lspkind.cmp_format({with_text = true, maxwidth = 50, menu = ({
+      buffer = "[Buffer]",
+      nvim_lsp = "[LSP]",
+      vsnip = "[Vsnip]",
+      path="[Path]"
+    })}),
+  
+  }})
 
