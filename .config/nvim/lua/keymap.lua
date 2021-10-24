@@ -49,7 +49,7 @@ map("n", "<leader>cs", ":Lspsaga signature_help<CR>", {silent = true})
 map("n", "<leader>ci", ":Lspsaga show_line_diagnostics<CR>", {silent = true})
 map("n", "<leader>cn", ":Lspsaga diagnostic_jump_next<CR>", {silent = true})
 map("n", "<leader>cp", ":Lspsaga diagnostic_jump_prev<CR>", {silent = true})
-map("n", "<leader>cr", ":Lspsaga rename<CR>", {silent = true})
+map("n", "<leader>cr", ":Lspsaga rename<CR>", opts_1)
 map("n", "<leader>cd", ":Lspsaga preview_definition<CR>", {silent = true})
 
 
