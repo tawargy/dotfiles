@@ -35,7 +35,6 @@ return require('packer').startup(function()
     use {'akinsho/bufferline.nvim',require("bufferline").setup{}}
     use {
           'hoob3rt/lualine.nvim',
-          options = {theme = 'dracula'}
         }
     use {
           'https://github.com/norcalli/nvim-colorizer.lua',
