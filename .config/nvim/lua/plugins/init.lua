@@ -8,6 +8,17 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {'dracula/vim', as = 'dracula'}
+   --  use {'arcticicestudio/nord-vim'}
+    use {'https://github.com/joshdick/onedark.vim'}
+    use {'bluz71/vim-nightfly-guicolors'}
+
+
+
+
+
+
+
+
     use {'https://github.com/mhartington/formatter.nvim'}
     use {
       'https://github.com/nvim-treesitter/nvim-treesitter',
@@ -87,6 +98,42 @@ use {
       ft = { 'json' },
       config = function()
         require('package-info').setup { force = true }
+      end,
+    }
+    --GIT{{{
+     use {'https://github.com/tpope/vim-fugitive'}
+     use {'https://github.com/tpope/vim-rhubarb'}
+    use {
+      'https://github.com/rhysd/git-messenger.vim',
+      cmd = 'GitMessenger',
+      keys = '<Plug>(git-messenger)',
+    }
+
+    use {
+      'https://github.com/sindrets/diffview.nvim',
+      cmd = { 'DiffviewOpen' },
+      config = function()
+        require('diffview').setup {
+          use_icons = false,
+        }
+      end,
+    }
+
+    use {
+      'https://github.com/rhysd/conflict-marker.vim',
+      cmd = {
+        'ConflictMarkerBoth',
+        'ConflictMarkerNone',
+        'ConflictMarkerOurselves',
+        'ConflictMarkerThemselves',
+      },
+      config = function()
+        -- disable the default highlight group
+        vim.g.conflict_marker_highlight_group = ''
+
+        -- Include text after begin and end markers
+        vim.g.conflict_marker_begin = '^<<<<<<< .*$'
+        vim.g.conflict_marker_end = '^>>>>>>> .*$'
       end,
     }
 

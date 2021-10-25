@@ -135,6 +135,7 @@ require'keymap'
 -------------------------------
 vim .cmd('colo dracula')
 
+--vim .cmd('colo nightfly')
 
 
 
