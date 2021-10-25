@@ -3,3 +3,5 @@
   email = tawargi.m@gmail.com
 [core]
   editor = vim
+[alias]
+	hist = log --oneline --graph --decorate --all
