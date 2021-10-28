@@ -1,4 +1,7 @@
 
+local nvim_lsp = require('lspconfig')
+
+
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
@@ -13,12 +16,12 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     update_in_insert = false,
   }
 )
+
+
+
+
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-
-
-
-local nvim_lsp = require('lspconfig')
 --Enable CSS
 --local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -50,5 +53,27 @@ nvim_lsp.tsserver.setup {
 -- Python server
 nvim_lsp.pyright.setup{}
 -- require'lspconfig'.tsserver.setup{}
+
+
+
+nvim_lsp.eslint.setup{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
