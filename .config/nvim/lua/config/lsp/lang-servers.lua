@@ -57,10 +57,9 @@ nvim_lsp.pyright.setup{}
 
 
 nvim_lsp.eslint.setup{}
-nvim_lsp.bashls.setup{
-}
-nvim_lsp.rust_analyzer.setup{}
+nvim_lsp.bashls.setup{}
 
+require'lspconfig'.rust_analyzer.setup{}
 
 
 
