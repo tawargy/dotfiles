@@ -81,9 +81,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
+  },
+  ["conflict-marker.vim"] = {
+    commands = { "ConflictMarkerBoth", "ConflictMarkerNone", "ConflictMarkerOurselves", "ConflictMarkerThemselves" },
+    config = { "\27LJ\2\n�\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\17^>>>>>>> .*$\24conflict_marker_end\17^<<<<<<< .*$\26conflict_marker_begin\5$conflict_marker_highlight_group\6g\bvim\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/conflict-marker.vim"
+  },
+  ["diffview.nvim"] = {
+    commands = { "DiffviewOpen" },
+    config = { "\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14use_icons\1\nsetup\rdiffview\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/diffview.nvim"
   },
   dracula = {
     loaded = true,
@@ -92,6 +112,15 @@ _G.packer_plugins = {
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
+  ["git-messenger.vim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/git-messenger.vim"
+  },
+  ["lsp_signature.nvim"] = {
+    config = { "\27LJ\2\n[\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\vzindex\0032\16hint_prefix\b⏵\nsetup\18lsp_signature\frequire\0" },
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -104,6 +133,10 @@ _G.packer_plugins = {
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/nui.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -130,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects"
+  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
@@ -142,9 +180,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
+  ["package-info.nvim"] = {
+    config = { "\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nforce\2\nsetup\17package-info\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/package-info.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  playground = {
+    commands = { "TSPlaygroundToggle" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -158,9 +210,30 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-nightfly-guicolors"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-rhubarb"
+  },
+  ["vim-visual-star-search"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-visual-star-search"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -169,10 +242,36 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\n[\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\vzindex\0032\16hint_prefix\b⏵\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\nZ\0\0\4\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0B\0\3\1K\0\1\0\1\0\1\bcss\2\1\4\0\0\6*\t!vim\f!packer\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TSPlaygroundToggle lua require("packer.load")({'playground'}, { cmd = "TSPlaygroundToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ConflictMarkerBoth lua require("packer.load")({'conflict-marker.vim'}, { cmd = "ConflictMarkerBoth", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ConflictMarkerNone lua require("packer.load")({'conflict-marker.vim'}, { cmd = "ConflictMarkerNone", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ConflictMarkerOurselves lua require("packer.load")({'conflict-marker.vim'}, { cmd = "ConflictMarkerOurselves", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ConflictMarkerThemselves lua require("packer.load")({'conflict-marker.vim'}, { cmd = "ConflictMarkerThemselves", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType json ++once lua require("packer.load")({'package-info.nvim'}, { ft = "json" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

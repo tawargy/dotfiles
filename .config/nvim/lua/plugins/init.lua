@@ -8,15 +8,7 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {'dracula/vim', as = 'dracula'}
-   --  use {'arcticicestudio/nord-vim'}
-    use {'https://github.com/joshdick/onedark.vim'}
     use {'bluz71/vim-nightfly-guicolors'}
-
-
-
-
-
-
 
 
     use {'https://github.com/mhartington/formatter.nvim'}
@@ -103,13 +95,8 @@ use {
     --GIT{{{
      use {'https://github.com/tpope/vim-fugitive'}
      use {'https://github.com/tpope/vim-rhubarb'}
-    use {
-      'https://github.com/rhysd/git-messenger.vim',
-      cmd = 'GitMessenger',
-      keys = '<Plug>(git-messenger)',
-    }
-
-    use {
+     use {'https://github.com/rhysd/git-messenger.vim'}
+     use {
       'https://github.com/sindrets/diffview.nvim',
       cmd = { 'DiffviewOpen' },
       config = function()
@@ -117,7 +104,7 @@ use {
           use_icons = false,
         }
       end,
-    }
+        }
 
     use {
       'https://github.com/rhysd/conflict-marker.vim',

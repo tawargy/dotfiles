@@ -10,10 +10,10 @@ map <C-p> "+p
 map('n','<TAB>',':BufferLineCycleNext<CR>',opts_1)
 map('n','<S-TAB>',':BufferLineCyclePrev<CR>',opts_1)
 -- Use alt-hjkl to resize windows
-map('n','<M-j>', '<:resize -2<CR>',opts_1)
-map('n','<M-k>', '<:resize +2<CR>', opts_1)
-map('n','<M-h>', '<:vertical resize -2<CR>', opts_1)
-map('n','<M-l>', '<:vertical resize +2<CR>', opts_1)
+map('n','<M-up>', '<c-w>+',opts_1)
+map('n','<M-down>', '<c-w>-', opts_1)
+map('n','<M-left>', '<c-w>>', opts_1)
+map('n','<M-right>', '<c-w><', opts_1)
 -- window navigation
 map('n','<C-h>','<C-w>h',opts_1)
 map('n','<C-l>','<C-w>l',opts_1)
@@ -21,8 +21,8 @@ map('n','<C-j>','<C-w>j',opts_1)
 map('n','<C-k>','<C-w>k',opts_1)
 --ESC, save, qiut
 map('i','jk','<ESC>',opts_1)
-map('n','<C-s>',':w<CR>',opts_1)
-map('n','<C-q>',':q<CR>',opts_1)
+map('n','<leader>s',':w<CR>',opts_1)
+map('n','<leader>q',':q<CR>',opts_1)
 map('n','bd',':bd<CR>',opts_1)  --colse buffer
 --nvim-tree
 map('n','<C-e>',':NvimTreeToggle<CR>',opts_1)
