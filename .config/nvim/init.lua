@@ -113,6 +113,15 @@ vim.opt.directory:append '.'
 vim.opt.updatetime = 1000
 vim.opt.updatecount = 0 -- update swapfiles every 80 typed chars (I don't use swap files anymore)
 
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_italic_functions = true
+-------------------------------
+-- theme
+-------------------------------
+--vim .cmd('colo dracula')
+vim.cmd('colo tokyonight')
+
+
 -----------------------------------------------------------------------------
 -- PLUGINS {{{1
 -----------------------------------------------------------------------------
@@ -130,12 +139,6 @@ require ('config.formatter')
 --keymap
 --------------------------------
 require'keymap'
--------------------------------
--- theme
--------------------------------
-vim .cmd('colo dracula')
-
-
 
 
 

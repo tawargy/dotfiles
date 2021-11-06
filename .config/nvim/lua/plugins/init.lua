@@ -8,6 +8,7 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {'dracula/vim', as = 'dracula'}
+    use {'https://github.com/folke/tokyonight.nvim'}
     use {'bluz71/vim-nightfly-guicolors'}
 
 
