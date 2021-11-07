@@ -23,7 +23,7 @@ vim.g.python3_host_skip_check = 1
 
 if vim.fn.executable 'python3' == 1 then
   vim.g.python3_host_prog = vim.fn.exepath 'python3'
-else
+
   vim.g.loaded_python3_provider = 0
 end
 
@@ -120,26 +120,18 @@ vim.g.tokyonight_italic_functions = true
 -------------------------------
 --vim .cmd('colo dracula')
 vim.cmd('colo tokyonight')
+--vim.cmd('colo nightfox')
 
-
------------------------------------------------------------------------------
+------------------------------------------------------
+-----------------------------------------------------
 -- PLUGINS {{{1
------------------------------------------------------------------------------
-require'plugins'
-
-require ('config.lsp')
-require ('config.treesitter')
-require ('config.autopairs')
-require ('config.lualine')
-require ('config.nvim-tree')
-require ('config.telescope')
-require ('config.todo-comments')
-require ('config.formatter')
 --------------------------------
+require'plugins'
+--------------------------------
+require ('config')
 --keymap
 --------------------------------
 require'keymap'
-
 
 
 

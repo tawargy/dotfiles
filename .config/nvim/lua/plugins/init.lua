@@ -9,6 +9,7 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use {'dracula/vim', as = 'dracula'}
     use {'https://github.com/folke/tokyonight.nvim'}
+    use {'EdenEast/nightfox.nvim'}
     use {'bluz71/vim-nightfly-guicolors'}
 
 
@@ -80,10 +81,9 @@ return require('packer').startup(function()
 
   use {'https://github.com/tpope/vim-commentary'}    
 use {'https://github.com/folke/todo-comments.nvim',
-          config = function()
-            require('todo-comments').setup {}
-          end,
-        }
+ requires = "nvim-lua/plenary.nvim",
+
+}
         use {'https://github.com/nelstrom/vim-visual-star-search'}
 use {
       'https://github.com/vuki656/package-info.nvim',
