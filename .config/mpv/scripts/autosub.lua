@@ -36,15 +36,15 @@ local languages = {
 --          and replace 'USERNAME' and 'PASSWORD' with your own:
 local logins = {
 --          { '--addic7ed', 'USERNAME', 'PASSWORD' },
---          { '--legendastv', 'USERNAME', 'PASSWORD' },
---          { '--opensubtitles', 'USERNAME', 'PASSWORD' },
+         { '--opensubtitles', 'tawargy', 'NOUR2009#m' },
+--       { '--legendastv', 'tawargy', 'NOUR2009#m' },
 --          { '--subscenter', 'USERNAME', 'PASSWORD' },
 }
 --=============================================================================
 -->>    ADDITIONAL OPTIONS:
 --=============================================================================
 local bools = {
-    auto = true,   -- Automatically download subtitles, no hotkeys required
+    auto = false,   -- Automatically download subtitles, no hotkeys required
     debug = false, -- Use `--debug` in subliminal command for debug output
     force = true,  -- Force download; will overwrite existing subtitle files
     utf8 = true,   -- Save all subtitle files as UTF-8

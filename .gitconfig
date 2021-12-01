@@ -5,3 +5,12 @@
   editor = vim
 [alias]
 	hist = log --oneline --graph --decorate --all
+
+[diff]
+    tool = vimdiff
+		
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
