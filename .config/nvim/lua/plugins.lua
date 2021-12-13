@@ -1,17 +1,19 @@
 
 
 --Only required if you have packer configured as `opt`
- vim.cmd [[packadd packer.nvim]]
+-- vim.cmd [[packadd packer.nvim]]
 
 
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use {'dracula/vim', as = 'dracula'}
     use {'https://github.com/folke/tokyonight.nvim'}
-    use {'EdenEast/nightfox.nvim'}
-    use {'bluz71/vim-nightfly-guicolors'}
-
+    use {'dracula/vim', as = 'dracula'}
+   
+    use {'kyazdani42/nvim-tree.lua' }
+    use {'kyazdani42/nvim-web-devicons'}   
+    use {'akinsho/bufferline.nvim',require("bufferline").setup{}}
+    use {'nvim-lualine/lualine.nvim' }
 
     use {'https://github.com/mhartington/formatter.nvim'}
     use {
@@ -19,9 +21,9 @@ return require('packer').startup(function()
       branch = '0.5-compat',
       run = ':TSUpdate',
     }
-    use {'https://github.com/windwp/nvim-ts-autotag'}
-    use{'https://github.com/p00f/nvim-ts-rainbow'  }
-    use { 'https://github.com/windwp/nvim-autopairs'  }
+    use {'windwp/nvim-ts-autotag'}
+    use {'p00f/nvim-ts-rainbow'  }
+    use {'windwp/nvim-autopairs'  }
     use {
           'https://github.com/nvim-treesitter/playground',
           cmd = 'TSPlaygroundToggle',
@@ -33,14 +35,7 @@ return require('packer').startup(function()
           branch = '0.5-compat',
         }   
   
-    use {
-      'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons',
-       }
-    use {'akinsho/bufferline.nvim',require("bufferline").setup{}}
-    use {
-          'hoob3rt/lualine.nvim',
-        }
+    
     use {
           'https://github.com/norcalli/nvim-colorizer.lua',
            config = function()

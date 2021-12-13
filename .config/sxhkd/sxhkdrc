@@ -1,0 +1,28 @@
+super + ctrl + q
+             bash ~/.local/bin/exit
+super + ctrl + w
+             cmd mtui 
+super + ctrl + t 
+             alacritty
+super + ctrl + f
+             pcmanfm
+super + ctrl + a
+            audacious
+super + ctrl + i
+            chromium
+super + ctrl + u
+            amixer sset Master playback 5%+
+super + ctrl + d
+            amixer sset Master playback 5%-
+super + ctrl + m
+            amixer sset Master mute
+super + ctrl + n 
+            amixer sset Master unmute
+super + ctrl + b
+             brightnessctl set +10%
+super + ctrl + s
+             brightnessctl set 10%-
+super + ctrl + p
+            mpv $(xclip -o)
+super + ctrl + 5
+            doas mount /dev/sda5 /media/data

@@ -126,12 +126,11 @@ vim.cmd('colo tokyonight')
 -----------------------------------------------------
 -- PLUGINS {{{1
 --------------------------------
-require'plugins'
+require ('plugins')
 --------------------------------
 require ('config')
 --keymap
 --------------------------------
 require'keymap'
-
 
 
