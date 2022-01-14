@@ -3,6 +3,7 @@
   email = tawargi.m@gmail.com
 [core]
   editor = vim
+	excludesfile = /home/tawargy/.gitignore_global
 [alias]
 	hist = log --oneline --graph --decorate --all
 

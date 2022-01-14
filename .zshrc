@@ -8,7 +8,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" #this load nvm bash_completion 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-#export PATH="/opt/nvim/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,7 +107,4 @@ source $ZSH/oh-my-zsh.sh
 alias agent= eval "$(ssh-agent -s)"
 alias gittest="ssh -T git@github.com"
 
-#alias nvim="~/Apps/nvim.appimage"
-#alias nvim="/opt/nvim/bin/nvim"
 alias up="doas apt update && doas apt upgrade -y"
-#alias vim="~/Apps/vim/bin/vim"

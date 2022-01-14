@@ -1,7 +1,7 @@
 super + ctrl + q
-             bash ~/.local/bin/exit
+             bash exit
 super + ctrl + w
-             cmd mtui 
+             alacritty -e "nmtui" 
 super + ctrl + t 
              alacritty
 super + ctrl + f

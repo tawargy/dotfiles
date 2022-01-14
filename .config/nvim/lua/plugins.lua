@@ -7,15 +7,18 @@
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use {'https://github.com/folke/tokyonight.nvim'}
-    use {'dracula/vim', as = 'dracula'}
-   
+    use {'folke/tokyonight.nvim'}
     use {'kyazdani42/nvim-tree.lua' }
+    use {'nvim-lualine/lualine.nvim' }
     use {'kyazdani42/nvim-web-devicons'}   
     use {'akinsho/bufferline.nvim',require("bufferline").setup{}}
-    use {'nvim-lualine/lualine.nvim' }
+    use {'mhartington/formatter.nvim'}
+    use {'tpope/vim-commentary'}    
+    use {'folke/todo-comments.nvim',
+         requires = "nvim-lua/plenary.nvim"}
 
-    use {'https://github.com/mhartington/formatter.nvim'}
+
+    -- Treesitter 
     use {
       'https://github.com/nvim-treesitter/nvim-treesitter',
       branch = '0.5-compat',
@@ -33,9 +36,7 @@ return require('packer').startup(function()
           'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
           after = 'nvim-treesitter',
           branch = '0.5-compat',
-        }   
-  
-    
+        }    
     use {
           'https://github.com/norcalli/nvim-colorizer.lua',
            config = function()
@@ -49,16 +50,17 @@ return require('packer').startup(function()
          })
          end,
         }
-  use {'https://github.com/neovim/nvim-lspconfig'}
-  use {'https://github.com/hrsh7th/cmp-nvim-lsp'}
-  use {'https://github.com/hrsh7th/cmp-buffer'}
-  use {'https://github.com/hrsh7th/nvim-cmp' }
-  use {'https://github.com/hrsh7th/cmp-vsnip'}
-  use {'https://github.com/hrsh7th/vim-vsnip'}
-  use {'https://github.com/hrsh7th/cmp-path'}
-  use {'https://github.com/onsails/lspkind-nvim'}
-  use {'https://github.com/glepnir/lspsaga.nvim'}
-  use {'https://github.com/ray-x/lsp_signature.nvim',
+      -- cmp plugins
+  use {'hrsh7th/nvim-cmp' }
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/vim-vsnip'}
+  -- LSP      
+  use {'neovim/nvim-lspconfig'}
+  use {'onsails/lspkind-nvim'}
+  use {'ray-x/lsp_signature.nvim',
           config = function()
             require('lsp_signature').setup {
               hint_prefix = '⏵', -- default is a panda emoji...
@@ -66,44 +68,30 @@ return require('packer').startup(function()
             }
           end,
         }
-  use {
-     'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
-      }
-   use{
-     'https://github.com/nvim-telescope/telescope-fzy-native.nvim'
-   }
-
-  use {'https://github.com/tpope/vim-commentary'}    
-use {'https://github.com/folke/todo-comments.nvim',
- requires = "nvim-lua/plenary.nvim",
-
-}
-        use {'https://github.com/nelstrom/vim-visual-star-search'}
-use {
-      'https://github.com/vuki656/package-info.nvim',
+   -- Telescop      
+  use {'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }}
+  use{
+     'nvim-telescope/telescope-fzy-native.nvim'}
+  use {'nelstrom/vim-visual-star-search'}
+  use {'vuki656/package-info.nvim',
       requires = { 'https://github.com/MunifTanjim/nui.nvim' },
       ft = { 'json' },
       config = function()
         require('package-info').setup { force = true }
-      end,
-    }
-    --GIT{{{
-     use {'https://github.com/tpope/vim-fugitive'}
-     use {'https://github.com/tpope/vim-rhubarb'}
-     use {'https://github.com/rhysd/git-messenger.vim'}
-     use {
-      'https://github.com/sindrets/diffview.nvim',
+      end }
+   --GIT{{{
+  use {'tpope/vim-fugitive'}
+  use {'tpope/vim-rhubarb'}
+  use {'rhysd/git-messenger.vim'}
+  use {'sindrets/diffview.nvim',
       cmd = { 'DiffviewOpen' },
       config = function()
         require('diffview').setup {
           use_icons = false,
         }
-      end,
-        }
-
-    use {
-      'https://github.com/rhysd/conflict-marker.vim',
+      end }
+  use {'rhysd/conflict-marker.vim',
       cmd = {
         'ConflictMarkerBoth',
         'ConflictMarkerNone',
@@ -117,8 +105,7 @@ use {
         -- Include text after begin and end markers
         vim.g.conflict_marker_begin = '^<<<<<<< .*$'
         vim.g.conflict_marker_end = '^>>>>>>> .*$'
-      end,
-    }
+      end }
 
 end)
 

@@ -10,5 +10,8 @@ ln -s ~/dotfiles/.config/mpv ~/.config
 ln -s ~/dotfiles/.config/alacritty ~/.config
 ln -s ~/dotfiles/.config/kitty ~/.config
 ln -s ~/dotfiles/.config/sxhkd ~/.config
+ln -s ~/dotfiles/.config/zathura ~/.config
+ln -s ~/dotfiles/.config/tmux ~/.config
+ln -s ~/dotfiles/scripts ~/.local/bin/scripts
 
 
