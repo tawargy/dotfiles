@@ -60,14 +60,8 @@ return require('packer').startup(function()
   -- LSP      
   use {'neovim/nvim-lspconfig'}
   use {'onsails/lspkind-nvim'}
-  use {'ray-x/lsp_signature.nvim',
-          config = function()
-            require('lsp_signature').setup {
-              hint_prefix = '⏵', -- default is a panda emoji...
-              zindex = 50,
-            }
-          end,
-        }
+  use {'ray-x/lsp_signature.nvim'}
+                 
    -- Telescop      
   use {'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }}

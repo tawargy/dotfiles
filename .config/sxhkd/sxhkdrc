@@ -1,5 +1,3 @@
-super + ctrl + q
-             bash exit
 super + ctrl + w
              alacritty -e "nmtui" 
 super + ctrl + t 
@@ -10,19 +8,13 @@ super + ctrl + a
             audacious
 super + ctrl + i
             chromium
-super + ctrl + u
-            amixer sset Master playback 5%+
-super + ctrl + d
-            amixer sset Master playback 5%-
-super + ctrl + m
-            amixer sset Master mute
-super + ctrl + n 
-            amixer sset Master unmute
-super + ctrl + b
-             brightnessctl set +10%
-super + ctrl + s
-             brightnessctl set 10%-
+super + ctrl + {equal, minus, 0,9} 
+            volume.sh {up, down,mute, unmute} 
+super + ctrl + {2,1}
+            brightnes.sh {up,down}
 super + ctrl + p
             mpv $(xclip -o)
 super + ctrl + 5
             doas mount /dev/sda5 /media/data
+super + ctrl + q
+             $HOME/scripts/exit.sh
