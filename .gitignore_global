@@ -17,7 +17,7 @@ Thumbs.db
 .mx-start
 .direnv
 .envrc
-.env
+#.env
 .tern-port
 .tern-project
 .ignore
