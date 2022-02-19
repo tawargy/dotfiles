@@ -1,56 +1,84 @@
+local fn = vim.fn
 
+-- Automatically install packer
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+  PACKER_BOOTSTRAP = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  print "Installing packer close and reopen Neovim..."
+  vim.cmd [[packadd packer.nvim]]
+end
 
---Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
 
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
 
-return require('packer').startup(function()
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-    use {'folke/tokyonight.nvim'}
-    use {'kyazdani42/nvim-tree.lua' }
-    use {'nvim-lualine/lualine.nvim' }
-    use {'kyazdani42/nvim-web-devicons'}   
-    use {'akinsho/bufferline.nvim',require("bufferline").setup{}}
-    use {'mhartington/formatter.nvim'}
-    use {'tpope/vim-commentary'}    
-    use {'folke/todo-comments.nvim',
-         requires = "nvim-lua/plenary.nvim"}
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
-
-    -- Treesitter 
-    use {
+-- Install your plugins here
+return packer.startup(function(use)
+  -- My plugins here
+  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use {'folke/tokyonight.nvim'}
+  use {'kyazdani42/nvim-tree.lua' }
+  use {'nvim-lualine/lualine.nvim' }
+  use {'kyazdani42/nvim-web-devicons'}   
+  use {'akinsho/bufferline.nvim'}
+  use {'mhartington/formatter.nvim'}
+  use {'tpope/vim-commentary'}    
+  use {'folke/todo-comments.nvim',requires = "nvim-lua/plenary.nvim"}
+  -- Treesitter 
+  use {
       'https://github.com/nvim-treesitter/nvim-treesitter',
       branch = '0.5-compat',
-      run = ':TSUpdate',
-    }
-    use {'windwp/nvim-ts-autotag'}
-    use {'p00f/nvim-ts-rainbow'  }
-    use {'windwp/nvim-autopairs'  }
-    use {
+      run = ':TSUpdate',}
+  use {'windwp/nvim-ts-autotag'}
+  use {'p00f/nvim-ts-rainbow'  }
+  use {'windwp/nvim-autopairs'  }
+  use {
           'https://github.com/nvim-treesitter/playground',
           cmd = 'TSPlaygroundToggle',
-          after = 'nvim-treesitter',
-        }
-     use {
+          after = 'nvim-treesitter',}
+  use {
           'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
           after = 'nvim-treesitter',
-          branch = '0.5-compat',
-        }    
-    use {
+          branch = '0.5-compat',}    
+  use {
           'https://github.com/norcalli/nvim-colorizer.lua',
-           config = function()
-      -- https://github.com/norcalli/nvim-colorizer.lua/issues/4#issuecomment-543682160
-         require('colorizer').setup({
-        '*',
-        '!vim',
-        '!packer',
-        }, {
-           css = true,
-         })
-         end,
-        }
-      -- cmp plugins
+          config = function()
+        -- https://github.com/norcalli/nvim-colorizer.lua/issues/4#issuecomment-543682160
+          require('colorizer').setup({
+         '*',
+         '!vim',
+         '!packer',},
+          { css = true,})
+        end,}
+   -- cmp plugins
   use {'hrsh7th/nvim-cmp' }
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-path'}
@@ -61,12 +89,10 @@ return require('packer').startup(function()
   use {'neovim/nvim-lspconfig'}
   use {'onsails/lspkind-nvim'}
   use {'ray-x/lsp_signature.nvim'}
-                 
-   -- Telescop      
-  use {'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }}
-  use{
-     'nvim-telescope/telescope-fzy-native.nvim'}
+               
+  -- Telescop      
+  use {'nvim-telescope/telescope.nvim',requires = { {'nvim-lua/plenary.nvim'} }}
+  use{'nvim-telescope/telescope-fzy-native.nvim'}
   use {'nelstrom/vim-visual-star-search'}
   use {'vuki656/package-info.nvim',
       requires = { 'https://github.com/MunifTanjim/nui.nvim' },
@@ -74,35 +100,25 @@ return require('packer').startup(function()
       config = function()
         require('package-info').setup { force = true }
       end }
-   --GIT{{{
+  --GIT{{{
   use {'tpope/vim-fugitive'}
   use {'tpope/vim-rhubarb'}
-  use {'rhysd/git-messenger.vim'}
+  use {'rhysd/git-messenger.vim'} 
   use {'sindrets/diffview.nvim',
-      cmd = { 'DiffviewOpen' },
-      config = function()
+        cmd = { 'DiffviewOpen' },
+        config = function()
         require('diffview').setup {
-          use_icons = false,
-        }
-      end }
-  use {'rhysd/conflict-marker.vim',
-      cmd = {
-        'ConflictMarkerBoth',
-        'ConflictMarkerNone',
-        'ConflictMarkerOurselves',
-        'ConflictMarkerThemselves',
-      },
-      config = function()
-        -- disable the default highlight group
-        vim.g.conflict_marker_highlight_group = ''
-
-        -- Include text after begin and end markers
-        vim.g.conflict_marker_begin = '^<<<<<<< .*$'
-        vim.g.conflict_marker_end = '^>>>>>>> .*$'
+         use_icons = false }
       end }
 
+    
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
-
 
 
 
