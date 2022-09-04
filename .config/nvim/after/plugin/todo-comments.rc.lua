@@ -1,5 +1,7 @@
+local status,todo=pcall(require,'todo-comments')
+if(not status) then return end
 
-require("todo-comments").setup{
+todo.setup{
 colors = {
     error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
     warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },

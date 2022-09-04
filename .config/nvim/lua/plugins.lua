@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+  use ({"nvim-lua/plenary.nvim"})
   --  Layout
 	use({ "folke/tokyonight.nvim" })
   use {
@@ -53,12 +54,11 @@ return packer.startup(function(use)
   }
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
-	use({ "kyazdani42/nvim-web-devicons" })
-	use({ "akinsho/bufferline.nvim" })
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   -- 
 	use({ "mhartington/formatter.nvim" })
 	use({ "tpope/vim-commentary" })
-	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
+	use({ "folke/todo-comments.nvim"})
 	use("lukas-reineke/indent-blankline.nvim")
 	-- Treesitter
 	use({
@@ -104,7 +104,7 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-vsnip" })
 	use({ "hrsh7th/vim-vsnip" })
 	-- Telescop
-	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+	use({ "nvim-telescope/telescope.nvim"})
 	use({ "nvim-telescope/telescope-fzy-native.nvim" })
 	use({ "nelstrom/vim-visual-star-search" })
 	use({
@@ -116,9 +116,9 @@ return packer.startup(function(use)
 		end,
 	})
 	--GIT{{{
-	use({ "tpope/vim-fugitive" })
-	use({ "tpope/vim-rhubarb" })
-	use({ "rhysd/git-messenger.vim" })
+	--use({ "tpope/vim-fugitive" })
+	--use({ "tpope/vim-rhubarb" })
+
 	use({
 		"sindrets/diffview.nvim",
 		cmd = { "DiffviewOpen" },
@@ -129,6 +129,7 @@ return packer.startup(function(use)
 		end,
 	})
 
+ 	use({ "rhysd/git-messenger.vim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

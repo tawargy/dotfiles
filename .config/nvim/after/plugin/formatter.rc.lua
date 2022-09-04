@@ -1,3 +1,7 @@
+local status,formatter=pcall(require,'formatter')
+if (not status) then return end
+
+
 local function prettier()
 	return {
 		exe = "prettier",
@@ -80,7 +84,7 @@ local filetype = {
 	},
 }
 
-require("formatter").setup({
+formatter.setup({
 	logging = false,
 	filetype = filetype,
 })
