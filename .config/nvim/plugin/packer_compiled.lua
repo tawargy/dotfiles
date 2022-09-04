@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
+  },
   ["diffview.nvim"] = {
     commands = { "DiffviewOpen" },
     config = { "\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14use_icons\1\nsetup\rdiffview\frequire\0" },
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/git-messenger.vim",
     url = "https://github.com/rhysd/git-messenger.vim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
@@ -127,6 +137,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["neosolarized.nvim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
+    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -203,7 +218,7 @@ _G.packer_plugins = {
     commands = { "TSPlaygroundToggle" },
     load_after = {},
     loaded = false,
-    needs_bufread = false,
+    needs_bufread = true,
     only_cond = false,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/playground",
     url = "https://github.com/nvim-treesitter/playground"
@@ -278,8 +293,8 @@ time([[Sequenced loading]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file TSPlaygroundToggle lua require("packer.load")({'playground'}, { cmd = "TSPlaygroundToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]

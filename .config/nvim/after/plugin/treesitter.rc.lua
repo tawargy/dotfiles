@@ -1,4 +1,6 @@
-require'nvim-treesitter.configs'.setup {
+local status,ts = pcall(require,'nvim-treesitter.configs')
+if (not status) then return end
+ts.setup {
   ensure_installed ="maintained",-- "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = { 'verilog' }, -- List of parsers to ignore installing
   highlight = {
@@ -63,3 +65,4 @@ rainbow = {
 
   
 }
+

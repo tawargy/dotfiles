@@ -7,9 +7,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" #this load nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" #this load nvm bash_completion 
 export PATH="$HOME/bin:$PATH"
-#export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
-
+export LANG=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
+export LC_TIME=en_US.UTF-8
+export LC_MONETARY=en_US.UTF-8
+export LC_PAPER=us_US.UTF-8
+export LC_NAME=en_US.UTF-8
+export LC_ADDRESS=en_US.UTF-8
+export LC_TELEPHONE=en_US.UTF-8
+export LC_MEASUREMENT=en_US.UTF-8
+export LC_IDENTIFICATION=us_US.UTF-8
+export LC_ALL=en_US.UTF-8
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -108,4 +118,13 @@ source $ZSH/oh-my-zsh.sh
 alias agent= eval "$(ssh-agent -s)"
 alias gittest="ssh -T git@github.com"
 
-alias up="doas apt update && doas apt upgrade -y"
+alias up="sudo apt update && sudo apt upgrade -y"
+alias x="exit"
+alias s="sensors"
+alias v="vnstat -d"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+ 
+alias luamake=/home/tawargy/Downloads/lua-language-server/3rd/luamake/luamake

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 #symbolic link
-
+ln -s ~/dotfiles/.npmrc ~/.npmrc
 ln -s ~/dotfiles/.vimrc  ~/.vimrc
 ln -s ~/dotfiles/.vim  ~/.vim
 ln -s ~/dotfiles/.zshrc ~/.zshrc

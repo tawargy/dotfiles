@@ -1,10 +1,15 @@
-require'nvim-tree'.setup {
+local status,nvimtree=pcall(require,'nvim-tree')
+if(not status) then return end
+
+
+
+nvimtree.setup {
   view={
     width='20%',
     side='left',
-    auto_resize=true,
+   -- auto_resize=true,
   },
-  auto_close = false,
+  --auto_close = false,
   update_focused_file={
     enable=true,
   },

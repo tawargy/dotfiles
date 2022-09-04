@@ -25,9 +25,13 @@ map('n','<C-s>',':w<CR>',opts_1)
 map('n','<C-q>',':q<CR>',opts_1)
 map('n','bd',':bd<CR>',opts_1)  --colse buffer
 --nvim-tree
-map('n','<C-e>',':NvimTreeToggle<CR>',opts_1)
+map('n','<C-n>',':NvimTreeToggle<CR>',opts_1)
+
 --formatter
 map('n','<leader>f',':Format<CR>',opts_0)
+--git
+map('n','<leader>do',':DiffviewOpen<CR>',opts_0)
+map('n','<leader>dc',':DiffviewClose<CR>',opts_0)
 --Telescope
 map('n','<C-f>',':Telescope find_files<CR>',opts_0)
 map('n','<leader>TT',':Telescope search_src<CR>',opts_0)
@@ -51,11 +55,11 @@ map('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts_0)
 map('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts_0)
 map('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts_0)
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts_0)
-map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts_0)
+map('n', 'ee', '<cmd>lua vim.diagnostic.open_float()<CR>', opts_0)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts_0)
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts_0)
 map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts_0)
 --map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts_0)
   
-
+map('n','<space>cl',':noh<CR>',opts_0)
 

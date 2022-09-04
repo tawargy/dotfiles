@@ -1,6 +1,9 @@
 [user]
   name = Mohamed Tawargy
   email = tawargi.m@gmail.com
+[init]
+	# requires Git 2.28 or later
+	defaultBranch = main  
 [core]
   editor = vim
 	excludesfile = /home/tawargy/.gitignore_global

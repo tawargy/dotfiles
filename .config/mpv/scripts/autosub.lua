@@ -3,8 +3,8 @@
 --=============================================================================
 --          This script uses Subliminal to download subtitles,
 --          so make sure to specify your system's Subliminal location below:
---local subliminal = '/home/david/.local/bin/subliminal'
-local subliminal = '/usr/local/bin/subliminal'
+local subliminal = '/home/tawargy/.local/bin/subliminal'
+--local subliminal = '/usr/local/bin/subliminal'
 --=============================================================================
 -->>    SUBTITLE LANGUAGE:
 --=============================================================================
