@@ -9,6 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/tools/lua-language-server/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
@@ -104,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
+# Compilation flag
 # export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -113,8 +114,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ alias zshconfig="vim ~/.zshrc"
+ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias agent= eval "$(ssh-agent -s)"
 alias gittest="ssh -T git@github.com"
 
@@ -123,8 +124,4 @@ alias x="exit"
 alias s="sensors"
 alias v="vnstat -d"
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
- 
-alias luamake=/home/tawargy/Downloads/lua-language-server/3rd/luamake/luamake
+alias luamake=/home/tawargy/tools/lua-language-server/3rd/luamake/luamake

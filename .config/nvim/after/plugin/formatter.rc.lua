@@ -82,9 +82,13 @@ local filetype = {
 			}
 		end,
 	},
+ 
 }
 
 formatter.setup({
 	logging = false,
 	filetype = filetype,
+
 })
+
+

@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- 
 	use({ "mhartington/formatter.nvim" })
 	use({ "tpope/vim-commentary" })
-	use({ "folke/todo-comments.nvim"})
+--	use({ "folke/todo-comments.nvim"})
 	use("lukas-reineke/indent-blankline.nvim")
 	-- Treesitter
 	use({
@@ -95,9 +95,11 @@ return packer.startup(function(use)
 	use({ "onsails/lspkind-nvim" })
 	use({ "ray-x/lsp_signature.nvim" })
 
+-- emmet
+  use({"mattn/emmet-vim"})
 
 	-- cmp plugins
-	use({ "hrsh7th/nvim-cmp" })
+  	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-nvim-lsp" })

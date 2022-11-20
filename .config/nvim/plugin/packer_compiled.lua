@@ -113,6 +113,11 @@ _G.packer_plugins = {
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/opt/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -247,11 +252,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["todo-comments.nvim"] = {
-    loaded = true,
-    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
-    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

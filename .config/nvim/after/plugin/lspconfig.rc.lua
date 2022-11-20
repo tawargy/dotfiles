@@ -53,7 +53,7 @@ end
 
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = { 'html',
 'cssls',
@@ -62,7 +62,8 @@ local servers = { 'html',
 'rust_analyzer',
 'pyright',
 'tsserver',
---'sumneko_lua'
+'clangd',
+'sumneko_lua'
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {

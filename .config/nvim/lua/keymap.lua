@@ -6,6 +6,11 @@ vim.cmd[[
 vnoremap <C-c> "+y
 map <C-p> "+p
 ]]
+-- Select all
+map('n', '<C-a>', 'gg<S-v>G',opts_0)
+-- Split window
+map('n', 'ss', ':split<Return><C-w>w',opts_0)
+map('n', 'sv', ':vsplit<Return><C-w>w',opts_0)
 --buffers navigation 
 map('n','<TAB>',':BufferLineCycleNext<CR>',opts_1)
 map('n','<S-TAB>',':BufferLineCyclePrev<CR>',opts_1)
