@@ -52,7 +52,6 @@ vim.opt.wrap = false                          -- display lines as one long line
 vim.opt.splitright = true                    -- force all vertical splits to go to the right of current window
 vim.opt.signcolumn = 'yes'                    -- always show the sign column, otherwise it would shift the text each time
 vim.opt.emoji = false
---vim.opt.formatoptions:remove('cro') 
 vim.v.clipboard = 'unnamedplus'                -- Copy paste between vim and everything else
 vim.cmd 'syntax sync minlines=256'             -- start highlighting from 256 lines backwards
 vim.opt.synmaxcol = 300                        -- do not highlight very long lines
@@ -88,3 +87,7 @@ vim.opt.directory = string.format('%s%s', vim.fn.stdpath 'data', '/swap//') -- k
 vim.opt.directory:append '.'
 vim.opt.updatetime = 1000
 vim.opt.updatecount = 0                        -- update swapfiles every 80 typed chars (I don't use swap files anymore)
+
+--Stop automatic newline continuation of comments
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

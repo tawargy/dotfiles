@@ -45,25 +45,30 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-  use ({"nvim-lua/plenary.nvim"})
-  --  Layout
+  --  colorscheme
 	use({ "folke/tokyonight.nvim" })
+  use 'Mofiqul/dracula.nvim'
+  use "EdenEast/nightfox.nvim"
+  use 'bluz71/vim-nightfly-colors'
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  -- layout
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-  -- 
+  -- utils 
 	use({ "mhartington/formatter.nvim" })
 	use({ "tpope/vim-commentary" })
---	use({ "folke/todo-comments.nvim"})
-	use("lukas-reineke/indent-blankline.nvim")
+  use({ "folke/todo-comments.nvim"})
+	use({"lukas-reineke/indent-blankline.nvim"})
+  use({"cdelledonne/vim-cmake"})
+  use({"mattn/emmet-vim"})
 	-- Treesitter
 	use({
 		"https://github.com/nvim-treesitter/nvim-treesitter",
-		branch = "0.5-compat",
+    --branch ='0.5-compat',
 		run = ":TSUpdate",
 	})
 	use({ "windwp/nvim-ts-autotag" })
@@ -77,8 +82,9 @@ return packer.startup(function(use)
 	use({
 		"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
-		branch = "0.5-compat",
+	--	branch = "0.5-compat",
 	})
+
 	use({
 		"https://github.com/norcalli/nvim-colorizer.lua",
 		config = function()
@@ -95,16 +101,17 @@ return packer.startup(function(use)
 	use({ "onsails/lspkind-nvim" })
 	use({ "ray-x/lsp_signature.nvim" })
 
--- emmet
-  use({"mattn/emmet-vim"})
 
 	-- cmp plugins
-  	use({ "hrsh7th/nvim-cmp" })
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-path" })
+  use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 	use({ "hrsh7th/cmp-vsnip" })
+	use({ "hrsh7th/cmp-path" })
+	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/vim-vsnip" })
+
 	-- Telescop
 	use({ "nvim-telescope/telescope.nvim"})
 	use({ "nvim-telescope/telescope-fzy-native.nvim" })
@@ -117,10 +124,12 @@ return packer.startup(function(use)
 			require("package-info").setup({ force = true })
 		end,
 	})
-	--GIT{{{
+use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
+	-- GIT
 	--use({ "tpope/vim-fugitive" })
 	--use({ "tpope/vim-rhubarb" })
-
 	use({
 		"sindrets/diffview.nvim",
 		cmd = { "DiffviewOpen" },
@@ -134,6 +143,9 @@ return packer.startup(function(use)
  	use({ "rhysd/git-messenger.vim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
+  --
+ 
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

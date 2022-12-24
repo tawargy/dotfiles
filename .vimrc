@@ -34,22 +34,22 @@ set tildeop
 set textwidth=80
 
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'https://github.com/tpope/vim-commentary'
-Plugin 'https://github.com/ryanoasis/vim-devicons'
-call vundle#end()           
-filetype plugin indent on
+ set rtp+=~/.vim/bundle/Vundle.vim
+ " call vundle#begin()
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'preservim/nerdtree'
+" Plugin 'arcticicestudio/nord-vim'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'https://github.com/tpope/vim-commentary'
+" Plugin 'https://github.com/ryanoasis/vim-devicons'
+ " call vundle#end()           
+ " filetype plugin indent on
 
 
-colorscheme nord
-let g:airline_theme='nord'
+" colorscheme nord
+" let g:airline_theme='nord'
 
 "keyMap
 let g:mapleader = "\<Space>"

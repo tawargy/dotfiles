@@ -1,20 +1,24 @@
-local status,ts = pcall(require,'nvim-treesitter.configs')
+local status,config = pcall(require,'nvim-treesitter.configs')
 if (not status) then return end
-ts.setup {
-  ensure_installed ="maintained",-- "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { 'verilog' }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,  -- false will disable the whole extensio
-    additional_vim_regex_highlighting = { 'python' },
-  },
 
-    autopairs = {
+config.setup {
+ ensure_installed ="all",
+ ignore_install={""},
+
+   highlight = {
+    enable = true,  -- false will disable the whole extensio
+    additional_vim_regex_highlighting = {  "javascript", "typescript.tsx", "js", "ts" },
+  },
+indent = {
+    enable = true
+  },
+   autopairs = {
       enable = true,
     },
-  autotag={
-  enable=true,
-  },
- textobjects = {
+   autotag={
+      enable=true,
+   },
+   textobjects = {
       select = {
         enable = true,
         lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
@@ -28,7 +32,9 @@ ts.setup {
         },
       },
     },
-    move = {
+
+
+ move = {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
@@ -62,7 +68,5 @@ rainbow = {
       updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
       persist_queries = false, -- Whether the query persists across vim sessions
     },
-
-  
-}
+ }
 

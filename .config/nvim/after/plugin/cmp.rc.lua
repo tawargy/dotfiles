@@ -7,10 +7,6 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-
-
-
-
 local status,cmp=pcall(require,'cmp')
 if (not status) then return end
 
@@ -18,6 +14,7 @@ local status,lspkind=pcall(require,'lspkind')
 if (not status) then return end
 
 local lspkind = require('lspkind')
+
 cmp.setup({
     snippet = {
       expand = function(args)
@@ -61,15 +58,15 @@ cmp.setup({
      { name = 'nvim_lsp' },    
      { name = 'vsnip' },
      { name = 'buffer' },
-     {name = 'path'},
+     { name = 'path'},
 
          },
- formatting = {
+    formatting = {
     format = lspkind.cmp_format({with_text = true, maxwidth = 50, menu = ({
       buffer = "[Buffer]",
       nvim_lsp = "[LSP]",
       vsnip = "[Vsnip]",
-      path="[Path]"
+      path= "[Path]"
     })}),
   
   }})
