@@ -115,7 +115,9 @@ return packer.startup(function(use)
 	-- Telescop
 	use({ "nvim-telescope/telescope.nvim"})
 	use({ "nvim-telescope/telescope-fzy-native.nvim" })
-	use({ "nelstrom/vim-visual-star-search" })
+	--use({ "nelstrom/vim-visual-star-search" })
+
+  -- Package info (All the npm/yarn/pnpm)
 	use({
 		"vuki656/package-info.nvim",
 		requires = { "https://github.com/MunifTanjim/nui.nvim" },
@@ -124,9 +126,11 @@ return packer.startup(function(use)
 			require("package-info").setup({ force = true })
 		end,
 	})
-use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  -- terminal
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
-end}
+  end}
+
 	-- GIT
 	--use({ "tpope/vim-fugitive" })
 	--use({ "tpope/vim-rhubarb" })

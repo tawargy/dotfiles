@@ -116,8 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
-alias agent= eval "$(ssh-agent -s)"
-alias gittest="ssh -T git@github.com"
+ alias ls="exa --icons"
+ alias agent= eval "$(ssh-agent -s)"
+ alias gittest="ssh -T git@github.com"
 
 alias up="sudo apt update && sudo apt upgrade -y"
 alias x="exit"

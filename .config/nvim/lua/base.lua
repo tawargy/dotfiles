@@ -91,3 +91,7 @@ vim.opt.updatecount = 0                        -- update swapfiles every 80 type
 --Stop automatic newline continuation of comments
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
+
+
+

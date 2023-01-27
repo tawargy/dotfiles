@@ -12,6 +12,7 @@ nvimtree.setup {
   --auto_close = false,
   update_focused_file={
     enable=true,
+    update_cwd = true,
   },
   disable_netrw=false,
 }
