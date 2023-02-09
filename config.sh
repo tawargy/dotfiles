@@ -11,6 +11,7 @@ ln -s ~/dotfiles/.config/mpv ~/.config
 ln -s ~/dotfiles/.config/alacritty ~/.config
 ln -s ~/dotfiles/.config/kitty ~/.config
 ln -s ~/dotfiles/.config/rofi ~/.config
+ln -s ~/dotfiles/.config/dunst ~/.config
 ln -s ~/dotfiles/.config/sxhkd ~/.config
 ln -s ~/dotfiles/.config/zathura ~/.config
 ln -s ~/dotfiles/.config/tmux ~/.config

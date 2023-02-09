@@ -132,8 +132,13 @@ return packer.startup(function(use)
   end}
 
 	-- GIT
-	--use({ "tpope/vim-fugitive" })
-	--use({ "tpope/vim-rhubarb" })
+
+  use {
+			'https://github.com/tpope/vim-fugitive',
+			requires = {
+				{ 'https://github.com/tpope/vim-rhubarb' },
+			},
+		}
 	use({
 		"sindrets/diffview.nvim",
 		cmd = { "DiffviewOpen" },
@@ -143,12 +148,11 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-
+  use {'lewis6991/gitsigns.nvim'}
  	use({ "rhysd/git-messenger.vim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
   --
- 
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

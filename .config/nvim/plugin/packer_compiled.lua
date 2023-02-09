@@ -143,6 +143,11 @@ _G.packer_plugins = {
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/git-messenger.vim",
     url = "https://github.com/rhysd/git-messenger.vim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -299,10 +304,20 @@ _G.packer_plugins = {
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-nightfly-colors"] = {
     loaded = true,
     path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
     url = "https://github.com/bluz71/vim-nightfly-colors"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/home/tawargy/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -312,14 +327,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\nZ\0\0\4\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0B\0\3\1K\0\1\0\1\0\1\bcss\2\1\4\0\0\6*\t!vim\f!packer\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\nZ\0\0\4\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0B\0\3\1K\0\1\0\1\0\1\bcss\2\1\4\0\0\6*\t!vim\f!packer\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
@@ -332,14 +347,14 @@ pcall(vim.api.nvim_create_user_command, 'DiffviewOpen', function(cmdargs)
           require('packer.load')({'diffview.nvim'}, { cmd = 'DiffviewOpen', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'diffview.nvim'}, { cmd = 'DiffviewOpen' }, _G.packer_plugins)
+          require('packer.load')({'diffview.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('DiffviewOpen ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'TSPlaygroundToggle', function(cmdargs)
           require('packer.load')({'playground'}, { cmd = 'TSPlaygroundToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'playground'}, { cmd = 'TSPlaygroundToggle' }, _G.packer_plugins)
+          require('packer.load')({'playground'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('TSPlaygroundToggle ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
