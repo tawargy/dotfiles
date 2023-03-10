@@ -4,10 +4,10 @@ if(not status) then return end
 
 
 nvimtree.setup {
+  open_on_setup = true,
   view={
     width='20%',
     side='left',
-   -- auto_resize=true,
   },
   --auto_close = false,
   update_focused_file={

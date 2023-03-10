@@ -63,7 +63,6 @@ local servers = { 'html',
 'pyright',
 'tsserver',
 'clangd',
-'sumneko_lua'
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
