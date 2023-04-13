@@ -4,7 +4,6 @@ if(not status) then return end
 
 
 nvimtree.setup {
-  open_on_setup = true,
   view={
     width='20%',
     side='left',
@@ -16,7 +15,6 @@ nvimtree.setup {
   },
   disable_netrw=false,
 }
-
 vim.g.nvim_tree_indent_markers = 1
 --vim.g.nvim_tree_gitignore = 1
 

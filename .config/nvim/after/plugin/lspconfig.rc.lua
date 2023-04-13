@@ -29,7 +29,7 @@ vim.lsp.diagnostic.on_publish_diagnostics,
        spacing = 4,
        prefix = '■', -- Could be '●', '▎', 'x'
      },
-     underline = false,
+     underline = true,
     signs = true,
     update_in_insert = false,
   }
