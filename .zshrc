@@ -10,6 +10,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/tools/lua-language-server/bin:$PATH"
+export PATH=$PATH:/usr/local/bin
 export LANG=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
