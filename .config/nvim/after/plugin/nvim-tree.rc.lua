@@ -5,7 +5,7 @@ if(not status) then return end
 
 nvimtree.setup {
   view={
-    width='25%',
+    width='20%',
     side='left',
   },
   --auto_close = false,
