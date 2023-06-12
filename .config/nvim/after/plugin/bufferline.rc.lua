@@ -8,3 +8,4 @@ bufferline.setup{
     diagnostics='nvim_lsp'
   }
 }
+
