@@ -30,11 +30,14 @@ sudo apt install mpv gaupol audacious xwallpaper zathura sxiv scrot handbrake -y
 echo "***************************** media installed ********************"
 
 # file manger
-sudo apt install pcmanfm ranger rofi lxappearance
+sudo apt install pcmanfm ranger rofi lxappearance dunst libnotify-bin -y
 
 #internet
-sudo apt install w3m filezilla
+sudo apt install w3m filezilla transmission -y
 
+# Flatpak
+sudo apt install flatpak
+flatpak install flathub net.ankiweb.Anki
 echo "***************************** Finsh install **********************"
 
 sudo echo "[Desktop Entry]
@@ -43,7 +46,7 @@ Name=DWM
 Comment=Dynamic Window Manager
 Exec=/usr/local/bin/dwm
 Icon=
-Type=Application" > /usr/share/xsessions.DWM.desktop
+Type=Application" > /usr/share/xsessions/DWM.desktop
 
 echo "*************************** Make DWM Entry **********************"
 
@@ -66,3 +69,4 @@ echo "#!/bin/bash
 xwallpaper --zoom  ~/wallpaper/pinkfloyd.jpg
 exec slstatus &
 " > ~/.dwm/autostart.sh
+echo "********************* DWM autostart****************************"

@@ -9,6 +9,7 @@ nvimtree.setup {
     side='left',
   },
   --auto_close = false,
+
   update_focused_file={
     enable=true,
     update_cwd = true,
@@ -17,6 +18,4 @@ nvimtree.setup {
 }
 vim.g.nvim_tree_indent_markers = 1
 --vim.g.nvim_tree_gitignore = 1
-
-
 

@@ -52,10 +52,12 @@ local function lsp_highlight_document(client)
 end
 
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local servers = { 'html',
+local servers = { 
+'html',
 'cssls',
 'eslint',
 'bashls',
@@ -66,7 +68,8 @@ local servers = { 'html',
 }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-    -- on_attach = my_custom_on_attach,
+     --on_attach = my_custom_on_attach,
+     on_attach = on_attach,
     capabilities = capabilities,
   }
 end

@@ -64,7 +64,7 @@ return packer.startup(function(use)
   use({ "folke/todo-comments.nvim"})
 	use({"lukas-reineke/indent-blankline.nvim"})
   use({"cdelledonne/vim-cmake"})
-  use({"mattn/emmet-vim"})
+
 	-- Treesitter
 	use({
 		"https://github.com/nvim-treesitter/nvim-treesitter",
@@ -111,11 +111,16 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/vim-vsnip" })
+  use({ "L3MON4D3/LuaSnip" })
+	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "rafamadriz/friendly-snippets" })
 
+  use({ "github/copilot.vim" })
+  use 'Exafunction/codeium.vim'
 	-- Telescop
 	use({ "nvim-telescope/telescope.nvim"})
 	use({ "nvim-telescope/telescope-fzy-native.nvim" })
-	--use({ "nelstrom/vim-visual-star-search" })
+	use({ "nelstrom/vim-visual-star-search" })
 
   -- Package info (All the npm/yarn/pnpm)
 	use({
