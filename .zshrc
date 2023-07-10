@@ -28,7 +28,7 @@ export LC_ALL=en_US.UTF-8
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
-Blue='063'
+Blue='027'
 Red='160'
 Green='047'
 POWERLEVEL9K_MODE="nerdfont-complete"

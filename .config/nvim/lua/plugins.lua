@@ -57,7 +57,7 @@ return packer.startup(function(use)
   -- layout
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   -- utils 
 	use({ "mhartington/formatter.nvim" })
 	use({ "tpope/vim-commentary" })
@@ -66,11 +66,14 @@ return packer.startup(function(use)
   use({"cdelledonne/vim-cmake"})
 
 	-- Treesitter
-	use({
-		"https://github.com/nvim-treesitter/nvim-treesitter",
-    --branch ='0.5-compat',
-		run = ":TSUpdate",
-	})
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 	use({ "windwp/nvim-ts-autotag" })
 	use({ "p00f/nvim-ts-rainbow" })
 	use({ "windwp/nvim-autopairs" })
@@ -115,8 +118,12 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "rafamadriz/friendly-snippets" })
 
+  -- code generator
   use({ "github/copilot.vim" })
   use 'Exafunction/codeium.vim'
+ -- use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+
+
 	-- Telescop
 	use({ "nvim-telescope/telescope.nvim"})
 	use({ "nvim-telescope/telescope-fzy-native.nvim" })

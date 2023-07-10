@@ -1,6 +1,7 @@
 local status,config = pcall(require,'nvim-treesitter.configs')
 if (not status) then return end
 
+
 config.setup {
  ensure_installed ="all",
  ignore_install={""},
@@ -16,7 +17,7 @@ config.setup {
     end,
     additional_vim_regex_highlighting = false,
   },
-indent = {
+  indent = {
     enable = true
   },
    autopairs = {
