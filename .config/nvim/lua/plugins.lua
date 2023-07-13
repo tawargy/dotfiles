@@ -46,18 +46,19 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
   --  colorscheme
-	use({ "folke/tokyonight.nvim" })
-  use 'Mofiqul/dracula.nvim'
+	--use({ "folke/tokyonight.nvim" })
+  --use 'Mofiqul/dracula.nvim'
   use "EdenEast/nightfox.nvim"
   use 'bluz71/vim-nightfly-colors'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+  -- use {
+  --   'svrana/neosolarized.nvim',
+  --   requires = { 'tjdevries/colorbuddy.nvim' }
+  -- }
   -- layout
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use "nvim-tree/nvim-web-devicons"
+  use {'akinsho/bufferline.nvim', tag = "*"}
   -- utils 
 	use({ "mhartington/formatter.nvim" })
 	use({ "tpope/vim-commentary" })
@@ -75,18 +76,7 @@ return packer.startup(function(use)
         end,
     }
 	use({ "windwp/nvim-ts-autotag" })
-	use({ "p00f/nvim-ts-rainbow" })
 	use({ "windwp/nvim-autopairs" })
-	use({
-		"https://github.com/nvim-treesitter/playground",
-		cmd = "TSPlaygroundToggle",
-		after = "nvim-treesitter",
-	})
-	use({
-		"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
-		after = "nvim-treesitter",
-	--	branch = "0.5-compat",
-	})
 
 	use({
 		"https://github.com/norcalli/nvim-colorizer.lua",
