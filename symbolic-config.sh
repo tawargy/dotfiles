@@ -14,6 +14,7 @@ ln -s ~/dotfiles/.config/dunst ~/.config
 ln -s ~/dotfiles/.config/sxhkd ~/.config
 ln -s ~/dotfiles/.config/zathura ~/.config
 ln -s ~/dotfiles/.config/tmux ~/.config
+ln -s ~/dotfiles/.config/ranger ~/.config
 
 sudo rm /etc/doas.conf
 sudo cp ~/dotfiles/doas.conf /etc/doas.conf

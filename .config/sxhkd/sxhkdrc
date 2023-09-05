@@ -1,20 +1,42 @@
-super + ctrl + w
-             alacritty -e "nmtui" 
-super + ctrl + t 
-             alacritty
-super + ctrl + f
-             pcmanfm
-super + ctrl + a
-            audacious
-super + ctrl + i
-            chromium
-super + ctrl + {equal, minus, 0,9} 
-            volume.sh {up, down,mute, unmute} 
-super + ctrl + {2,1}
-            brightnes.sh {up,down}
-super + ctrl + p
+super + q
+                    /home/tawargy/scripts/dwm/exit.sh
+
+super + shift + i
+                    kitty -e "nmtui" 
+
+super + shift + p             
+                    pavucontrol
+
+super + shift + m             
+                    arandr
+
+super + r             
+                    rofi -show drun
+
+alt + f
+                    pcmanfm
+alt + r
+                    kitty -e ranger
+alt + m
+                    audacious
+alt + w 
+                    brave-browser
+alt + z   
+                    python3 /home/tawargy/scripts/moazin/moazin.py
+
+alt + 1
+                   light -U 5
+alt + 2            
+                   light -A 5
+
+alt + equal
+              pactl set-sink-volume @DEFAULT_SINK@ +5% 
+alt + minus
+              pactl set-sink-volume @DEFAULT_SINK@ -5%
+alt + 0
+              pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+alt + shift + p
             mpv $(xclip -o)
-super + ctrl + 5
-            doas mount /dev/sda5 /media/data
-super + ctrl + q
-             $HOME/scripts/exit.sh
+
