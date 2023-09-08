@@ -1,40 +1,42 @@
 super + q
-                    /home/tawargy/scripts/dwm/exit.sh
-
-super + shift + i
-                    kitty -e "nmtui" 
-
-super + shift + p             
-                    pavucontrol
-
-super + shift + m             
-                    arandr
+             /home/tawargy/scripts/dwm/exit.sh
 
 super + r             
-                    rofi -show drun
+            rofi -show drun
+
+alt + shift + i
+            kitty -e "nmtui" 
+
+alt + shift + p             
+            pavucontrol
+
+alt + shift + m             
+            arandr
+
+
 
 alt + f
-                    pcmanfm
+            pcmanfm
 alt + r
-                    kitty -e ranger
+            kitty -e ranger
 alt + m
-                    audacious
+            audacious
 alt + w 
-                    brave-browser
+            brave-browser
 alt + z   
-                    python3 /home/tawargy/scripts/moazin/moazin.py
+            python3 /home/tawargy/scripts/moazin/moazin.py
 
 alt + 1
-                   light -U 5
+            light -U 5
 alt + 2            
-                   light -A 5
+            light -A 5
 
 alt + equal
-              pactl set-sink-volume @DEFAULT_SINK@ +5% 
+            pactl set-sink-volume @DEFAULT_SINK@ +5% 
 alt + minus
-              pactl set-sink-volume @DEFAULT_SINK@ -5%
+            pactl set-sink-volume @DEFAULT_SINK@ -5%
 alt + 0
-              pactl set-sink-mute @DEFAULT_SINK@ toggle
+            pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 
 alt + shift + p
