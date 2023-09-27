@@ -17,8 +17,9 @@ ln -s ~/dotfiles/.config/tmux ~/.config
 ln -s ~/dotfiles/.config/ranger ~/.config
 ln -s ~/dotfiles/.config/htop ~/.config
 
+ln -s ~/dotfiles/scripts/bin/* ~/bin
+
 sudo rm /etc/doas.conf
 sudo cp ~/dotfiles/doas.conf /etc/doas.conf
-
 
 
