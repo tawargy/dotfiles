@@ -169,7 +169,7 @@ source $ZSH/oh-my-zsh.sh
  alias agent= eval "$(ssh-agent -s)"
  alias gittest="ssh -T git@github.com"
 
-alias up="sudo apt update && sudo apt upgrade -y"
+alias up="doas apt update && doas apt upgrade -y"
 alias x="exit"
 alias s="sensors"
 alias v="vnstat -d"

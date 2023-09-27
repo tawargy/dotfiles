@@ -36,13 +36,13 @@ for battery in /sys/class/power_supply/BAT1*; do
   if [ "$status" = "$discharging" ] && [ $capacity -lt 26 ]
   then 
     status=$down
-    dunstify "Battery " "${down} The Battery is ${capacity}%." -u critical -r 999
+    # dunstify "Battery " "${down} The Battery is ${capacity}%." -u critical -r 999
   fi  
 
  if [ "$status" = "$charging" ] && [ $capacity -gt 79 ]
   then 
     status=$up
-    dunstify "Battery " "${up} The Battery is ${capacity}%." -u normal -r 999
+    # dunstify "Battery " "${up} The Battery is ${capacity}%." -u normal -r 999
   fi 
 
   # Prints the info
