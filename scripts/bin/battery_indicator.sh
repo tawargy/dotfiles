@@ -43,7 +43,7 @@ for battery in /sys/class/power_supply/BAT1*; do
     status=$up
   fi 
 
- if [ "$status" = "$discharging" ] && [ $capacity -lt 6 ]
+ if [ "$status" = "$discharging" ] && [ $capacity -lt 11 ]
   then 
     doas poweroff
   fi
