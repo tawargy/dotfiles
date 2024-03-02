@@ -1,8 +1,14 @@
 super + q
              /home/tawargy/bin/exit.sh
 
-super + r             
+super + shift + r             
             rofi -show drun
+            
+super + s 
+            slock
+            
+super +  shift + enter
+            kitty
 
 alt + ctrl + i
             kitty -e "nmtui" 

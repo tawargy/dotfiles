@@ -8,6 +8,7 @@ Name=DWM
 Comment=Dynamic Window Manager
 Exec=/usr/local/bin/dwm
 Icon=
+DesktopNames=DWM
 Type=Application" > /usr/share/xsessions/DWM.desktop
 
 echo "*************************** DWM Entry ok **********************"

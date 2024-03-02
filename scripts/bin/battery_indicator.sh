@@ -1,21 +1,21 @@
 #!/bin/sh
 
 
-# full="^c#ffd766^ "
-# discharging="^c#d2b1ea^  "
-# charging="^c#59c9b0^  " 
-# nocharging="^c#ff1a55^  " 
-# unknown="^c#ffd766^  " 
-# up="^c#FF6E12^   "
-# down="^c#ff1a55^  "
+full="^c#ffd766^ "
+discharging="^c#d2b1ea^  "
+charging="^c#59c9b0^  " 
+nocharging="^c#ff1a55^  " 
+unknown="^c#ffd766^  " 
+up="^c#FF6E12^   "
+down="^c#ff1a55^  "
 
-full=""
-discharging=" "
-charging=" " 
-nocharging=" " 
-unknown=" " 
-up="  "
-down=" "
+# full=""
+# discharging=" "
+# charging=" " 
+# nocharging=" " 
+# unknown=" " 
+# up="  "
+# down=" "
 
 for battery in /sys/class/power_supply/BAT1*; do
   # If non-first battery, print a space separator.
@@ -36,14 +36,17 @@ for battery in /sys/class/power_supply/BAT1*; do
   if [ "$status" = "$discharging" ] && [ $capacity -lt 26 ]
   then 
     status=$down
-    # dunstify "Battery " "${down} The Battery is ${capacity}%." -u critical -r 999
   fi  
 
  if [ "$status" = "$charging" ] && [ $capacity -gt 79 ]
   then 
     status=$up
-    # dunstify "Battery " "${up} The Battery is ${capacity}%." -u normal -r 999
   fi 
+
+ if [ "$status" = "$discharging" ] && [ $capacity -lt 6 ]
+  then 
+    doas poweroff
+  fi
 
   # Prints the info
   printf "%s%d%%" "$status" "$capacity";  

@@ -5,6 +5,7 @@ choice=$(printf "%s\n%s\n%s" "Shutdown" "Reboot" "Logout" | dmenu -i -p "Choose 
 [ $choice = "Shutdown" ] && doas poweroff
 [ $choice = "Reboot"   ] && doas reboot
 [ $choice = "Logout"   ] && pkill dwm
+[ $choice = "Lock"     ] && slock
 
 
 

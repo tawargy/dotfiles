@@ -74,4 +74,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+local cmp_nvim_lsp = require "cmp_nvim_lsp"
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+  capabilities = cmp_nvim_lsp.default_capabilities(),
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
+}
 

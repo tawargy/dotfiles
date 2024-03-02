@@ -174,4 +174,7 @@ alias x="exit"
 alias s="sensors"
 alias v="vnstat -d"
 
+alias mserver="doas mount -t nfs 192.168.1.50:/home/tawargy /mnt/server -o rw"
+alias umserver="doas umount /mnt/server"
+
 alias luamake=/home/tawargy/tools/lua-language-server/3rd/luamake/luamake

@@ -13,23 +13,12 @@ if (not status) then return end
 local status,lspkind=pcall(require,'lspkind')
 if (not status) then return end
 
-local lspkind = require('lspkind')
+lspkind.init()
 
-require("luasnip.loaders.from_vscode").lazy_load()
+
+
 
 cmp.setup({
-    snippet = {
-      expand = function(args)
-        -- For `vsnip` user.
-        vim.fn["vsnip#anonymous"](args.body)
-
-        -- For `luasnip` user.
-         require('luasnip').lsp_expand(args.body)
-
-        -- For `ultisnips` user.
-        -- vim.fn["UltiSnips#Anon"](args.body)
-      end,
-    },
     mapping = {
       ["<C-k>"] = cmp.mapping.select_prev_item(),
 		  ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -38,28 +27,21 @@ cmp.setup({
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.close(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+         },
 
-      -- ["<Down>"] = cmp.mapping(function(fallback)
-      -- if cmp.visible() then
-      --   cmp.select_next_item()
-      -- elseif vim.fn["vsnip#available"]() == 1 then
-      --   feedkey("<Plug>(vsnip-expand-or-jump)", "")
-      -- elseif has_words_before() then
-      --   cmp.complete()
-      -- else
-      --   fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-      -- end
-    -- end, { "i", "s" }),
+    snippet = {
+      expand = function(args)
+        -- For `vsnip` user.
+       -- vim.fn["vsnip#anonymous"](args.body)
 
-    -- ["<Up>"] = cmp.mapping(function()
-      -- if cmp.visible() then
-      --   cmp.select_prev_item()
-      -- elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-      --   feedkey("<Plug>(vsnip-jump-prev)", "")
-      -- end
-    -- end, { "i", "s" }),
+        -- For `luasnip` user.
+         require('luasnip').lsp_expand(args.body)
+
+        -- For `ultisnips` user.
+        -- vim.fn["UltiSnips#Anon"](args.body)
+      end,
     },
-
+   
 
 
     sources = {
@@ -67,15 +49,16 @@ cmp.setup({
      { name = 'buffer' },
      { name = 'path'},
      { name = 'luasnip'},
-
+     { name = 'nvim_lua'},
     },
 
     formatting = {
     format = lspkind.cmp_format({with_text = true, maxwidth = 50, menu = ({
-      buffer = "[Buffer]",
+      buffer = "[buf]",
       nvim_lsp = "[LSP]",
-      path= "[Path]",
-      luasnip = "[Snippet]",
+      path= "[path]",
+      luasnip = "[snip]",
+      nvim_lua = "[lua]",
     })})},
 
 

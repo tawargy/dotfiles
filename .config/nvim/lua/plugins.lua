@@ -50,11 +50,7 @@ return packer.startup(function(use)
   --use 'Mofiqul/dracula.nvim'
   use "EdenEast/nightfox.nvim"
   use 'bluz71/vim-nightfly-colors'
-  -- use {
-  --   'svrana/neosolarized.nvim',
-  --   requires = { 'tjdevries/colorbuddy.nvim' }
-  -- }
-  -- layout
+    -- layout
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "nvim-lualine/lualine.nvim" })
   use "nvim-tree/nvim-web-devicons"
@@ -97,15 +93,16 @@ return packer.startup(function(use)
 
 	-- cmp plugins
   use({ "hrsh7th/nvim-cmp" })
+	use({ "hrsh7th/cmp-path" })
+	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 	use({ "hrsh7th/cmp-vsnip" })
-	use({ "hrsh7th/cmp-path" })
-	use({ "hrsh7th/cmp-buffer" })
+	use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "hrsh7th/vim-vsnip" })
   use({ "L3MON4D3/LuaSnip" })
-	use({ "saadparwaiz1/cmp_luasnip" })
+
 	use({ "rafamadriz/friendly-snippets" })
 
   -- code generator
@@ -160,3 +157,4 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+

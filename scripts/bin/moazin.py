@@ -12,7 +12,7 @@ class Moazin:
     """Moazin class"""
 
     API = "http://api.aladhan.com/v1/timingsByCity"
-    payload = {"country": "EG", "city": "cairo"}
+    payload = {"country": "Egypt", "city": "Damietta"}
     pray_time_table = {
         "day": None,
         "prayTime": {
