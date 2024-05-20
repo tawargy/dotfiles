@@ -1,6 +1,7 @@
-local configs = require("nvim-treesitter.configs")
+local status,treesitter=pcall(require,'nvim-treesitter.configs')
+if(not status) then return end
 
-configs.setup {
+treesitter.setup {
 	sync_install = false,
   ensure_installed = {
 				'bash',

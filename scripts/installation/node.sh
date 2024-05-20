@@ -10,5 +10,5 @@ nvm install 18.16.0
 
 npm i -g npm eslint prettier liveserver ndb typescript yarn pnpm nodemon corepack
 npm i -g bash-language-server pyright tree-sitter-cli ts-node typescript-language-server 
-npm i -g typescript vscode-langservers-extracted 
+npm i -g typescript vscode-langservers-extracted yaml-language-server@latest 
 

@@ -8,9 +8,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" #this load nvm bash_completion 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/tools/lua-language-server/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/bin
 export LANG=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
@@ -72,7 +72,24 @@ POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$Red
 
 
 
+# study stream aliases
+# Requires https://github.com/caarlos0/timer to be installed. spd-say should ship with your distro
 
+declare -A pomo_options
+pomo_options["work"]="45"
+pomo_options["break"]="15"
+
+pomodoro () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+  val=$1
+  echo $val | lolcat
+  timer ${pomo_options["$val"]}m
+  spd-say "'$val' session done"
+  fi
+}
+
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
 
 
 
@@ -169,12 +186,15 @@ source $ZSH/oh-my-zsh.sh
  alias agent= eval "$(ssh-agent -s)"
  alias gittest="ssh -T git@github.com"
 
-alias up="doas apt update && doas apt upgrade -y"
+alias up="doas apt update && doas apt full-upgrade -y"
 alias x="exit"
 alias s="sensors"
 alias v="vnstat -d"
 
 alias mserver="doas mount -t nfs 192.168.1.50:/home/tawargy /mnt/server -o rw"
 alias umserver="doas umount /mnt/server"
+
+alias vdi="yt-dlp -F "
+alias vd="yt-dlp -f "
 
 alias luamake=/home/tawargy/tools/lua-language-server/3rd/luamake/luamake

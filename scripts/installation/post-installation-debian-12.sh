@@ -23,7 +23,7 @@ echo "**************************** System updated ***********************"
 sudo apt install libxft-dev libx11-dev libxinerama-dev -y
 
 # tools
-sudo apt install kitty exa doas vim keepassxc git -y
+sudo apt install kitty exa doas vim keepassxc xautolock git -y
 echo "***************************** tools installed ********************"
 
 # media
@@ -46,6 +46,11 @@ flatpak install flathub md.obsidian.obsidian
 flatpak install flathub org.qbittorrent.qbittorrent
 flatpak install flathub com.mongodb.Compass
 flatpak install flathub io.beekeeperstudio.Studio
+
+# timer
+echo 'deb [trusted=yes] https://repo.caarlos0.dev/apt/ /' | sudo tee /etc/apt/sources.list.d/caarlos0.list
+sudo apt update
+sudo apt install timer
 
 echo "***************************** Finsh install **********************"
 

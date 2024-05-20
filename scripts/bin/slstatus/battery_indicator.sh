@@ -9,13 +9,7 @@ unknown="^c#ffd766^  "
 up="^c#FF6E12^   "
 down="^c#ff1a55^  "
 
-# full=""
-# discharging=" "
-# charging=" " 
-# nocharging=" " 
-# unknown=" " 
-# up="  "
-# down=" "
+
 
 for battery in /sys/class/power_supply/BAT1*; do
   # If non-first battery, print a space separator.

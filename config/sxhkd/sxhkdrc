@@ -11,7 +11,7 @@ super +  shift + enter
             kitty
 
 alt + ctrl + i
-            kitty -e "nmtui" 
+            st -e "nmtui" 
 
 alt + ctrl + p             
             pavucontrol
@@ -20,17 +20,19 @@ alt + ctrl + m
             arandr
 
 alt + ctrl + h
-            kitty -e htop
+            st -e htop
 
 
 alt + f
             pcmanfm
 alt + r
-            kitty -e ranger
+            st -e ranger
 alt + m
             audacious
 alt + w 
             brave-browser
+alt + o
+            flatpak run md.obsidian.Obsidian
 alt + z   
             python3 /home/tawargy/bin/moazin.py
 
@@ -47,6 +49,6 @@ alt + 0
             pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 
-alt + shift + p
+alt + >
             mpv $(xclip -o)
 
